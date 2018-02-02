@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A982F712023355400B287DF /* VERSION in Resources */ = {isa = PBXBuildFile; fileRef = 2A982F6F2023355300B287DF /* VERSION */; };
+		2A982F722023355400B287DF /* libGrowing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A982F702023355300B287DF /* libGrowing.a */; };
+		2A982F74202335F000B287DF /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A982F73202335F000B287DF /* libsqlite3.tbd */; };
+		2A982F76202335F500B287DF /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A982F75202335F500B287DF /* libicucore.tbd */; };
 		3EC6487318FF8A5000024205 /* ReadMe.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3EC6487218FF8A5000024205 /* ReadMe.txt */; };
 		5356823E18F3656900BAAD62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5356823D18F3656900BAAD62 /* Foundation.framework */; };
 		5356824018F3656900BAAD62 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5356823F18F3656900BAAD62 /* CoreGraphics.framework */; };
@@ -44,6 +48,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A982F6E2023355300B287DF /* Growing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Growing.h; sourceTree = "<group>"; };
+		2A982F6F2023355300B287DF /* VERSION */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VERSION; sourceTree = "<group>"; };
+		2A982F702023355300B287DF /* libGrowing.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGrowing.a; sourceTree = "<group>"; };
+		2A982F73202335F000B287DF /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		2A982F75202335F500B287DF /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		3EC6487218FF8A5000024205 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadMe.txt; sourceTree = SOURCE_ROOT; };
 		5356823A18F3656900BAAD62 /* UICatalog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICatalog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5356823D18F3656900BAAD62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -113,19 +122,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A982F76202335F500B287DF /* libicucore.tbd in Frameworks */,
+				2A982F74202335F000B287DF /* libsqlite3.tbd in Frameworks */,
 				5356824018F3656900BAAD62 /* CoreGraphics.framework in Frameworks */,
 				5356824218F3656900BAAD62 /* UIKit.framework in Frameworks */,
 				5356823E18F3656900BAAD62 /* Foundation.framework in Frameworks */,
+				2A982F722023355400B287DF /* libGrowing.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A982F6D2023355300B287DF /* GrowingIO-iOS-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				2A982F6E2023355300B287DF /* Growing.h */,
+				2A982F6F2023355300B287DF /* VERSION */,
+				2A982F702023355300B287DF /* libGrowing.a */,
+			);
+			path = "GrowingIO-iOS-SDK";
+			sourceTree = "<group>";
+		};
 		5356823118F3656900BAAD62 = {
 			isa = PBXGroup;
 			children = (
 				3EC6487218FF8A5000024205 /* ReadMe.txt */,
+				2A982F6D2023355300B287DF /* GrowingIO-iOS-SDK */,
 				5356824318F3656900BAAD62 /* UICatalog */,
 				5356823C18F3656900BAAD62 /* Frameworks */,
 				5356823B18F3656900BAAD62 /* Products */,
@@ -143,6 +166,8 @@
 		5356823C18F3656900BAAD62 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2A982F75202335F500B287DF /* libicucore.tbd */,
+				2A982F73202335F000B287DF /* libsqlite3.tbd */,
 				5356823D18F3656900BAAD62 /* Foundation.framework */,
 				5356823F18F3656900BAAD62 /* CoreGraphics.framework */,
 				5356824118F3656900BAAD62 /* UIKit.framework */,
@@ -274,6 +299,11 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = f;
+				TargetAttributes = {
+					5356823918F3656900BAAD62 = {
+						DevelopmentTeam = SXBU677CPT;
+					};
+				};
 			};
 			buildConfigurationList = 5356823518F3656900BAAD62 /* Build configuration list for PBXProject "UICatalog" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -301,6 +331,7 @@
 				5356825418F3656900BAAD62 /* Main_iPad.storyboard in Resources */,
 				53874F9918F36B1800510922 /* Localizable.strings in Resources */,
 				5356825918F3656900BAAD62 /* Images.xcassets in Resources */,
+				2A982F712023355400B287DF /* VERSION in Resources */,
 				3EC6487318FF8A5000024205 /* ReadMe.txt in Resources */,
 				5356825118F3656900BAAD62 /* Main_iPhone.storyboard in Resources */,
 			);
@@ -449,10 +480,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = SXBU677CPT;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UICatalog/UICatalog-Prefix.pch";
 				INFOPLIST_FILE = "UICatalog/UICatalog-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GrowingIO-iOS-SDK",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.growingio.apple-samplecode.UICatalog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -463,10 +501,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = SXBU677CPT;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "UICatalog/UICatalog-Prefix.pch";
 				INFOPLIST_FILE = "UICatalog/UICatalog-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GrowingIO-iOS-SDK",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.growingio.apple-samplecode.UICatalog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

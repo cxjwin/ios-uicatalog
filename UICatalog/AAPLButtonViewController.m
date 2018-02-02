@@ -46,6 +46,7 @@
 */
 
 #import "AAPLButtonViewController.h"
+#import "Growing.h"
 
 @interface AAPLButtonViewController()
 
@@ -65,6 +66,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    // 配置用户属性
+    [Growing setUserId:@"100324"];
+    [Growing setPeopleVariableWithKey:@"company_id" andNumberValue:@943123];
+    [Growing setPeopleVariableWithKey:@"user_name" andStringValue:@"王同学"];
+    [Growing setPeopleVariable:@{@"company_name" : @"GrowingIO", @"sales_name" : @"销售员小王"}];
+    
+    // 设置页面级别变量
+    [Growing setPageVariable:@{@"custom_page" : @"AAPLButtonViewController"} toViewController:self];
+    
     // All of the buttons are created in the storyboard, but configured below.
     [self configureSystemTextButton];
     [self configureSystemContactAddButton];
@@ -127,6 +137,11 @@
 
 // Handler for all of AAPLButtonViewController's UIButton actions.
 - (void)buttonClicked:(UIButton *)button {
+    
+    // track 事件
+    NSString *frameString = NSStringFromCGRect(button.frame);
+    [Growing track:@"button_frame" withVariable:@{@"frame" : frameString}];
+    
     NSLog(@"A button was clicked: %@.", button);
 }
 

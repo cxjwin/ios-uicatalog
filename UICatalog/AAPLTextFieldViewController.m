@@ -46,6 +46,7 @@
 */
 
 #import "AAPLTextFieldViewController.h"
+#import "Growing.h"
 
 @interface AAPLTextFieldViewController()<UITextFieldDelegate>
 
@@ -80,6 +81,9 @@
     self.textField.autocorrectionType = UITextAutocorrectionTypeYes;
     self.textField.returnKeyType = UIReturnKeyDone;
     self.textField.clearButtonMode = UITextFieldViewModeNever;
+    
+    // 如果需要采集TextField的文本, 请设置这个属性为NO
+    self.textField.growingAttributesDonotTrackValue = NO;
 }
 
 - (void)configureTintedTextField {

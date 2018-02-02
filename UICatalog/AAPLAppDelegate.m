@@ -46,6 +46,27 @@
 */
 
 #import "AAPLAppDelegate.h"
+#import "Growing.h"
 
 @implementation AAPLAppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(nullable NSDictionary<UIApplicationLaunchOptionsKey, id> *)launchOptions NS_AVAILABLE_IOS(3_0) {
+    
+    // 启动GrowingIO
+    [Growing startWithAccountId:@"b685de56b4394b8f"];
+    
+    // 开启Growing调试日志
+    [Growing setEnableLog:YES];
+        
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    // 请务必确保该函数被调用
+    if ([Growing handleUrl:url]) {
+        return YES;
+    }
+    return NO;
+}
+
 @end
